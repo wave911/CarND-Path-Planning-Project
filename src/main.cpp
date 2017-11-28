@@ -106,17 +106,12 @@ int main() {
             	pathPlan.updateCarData(sensor_fusion, previous_path_x, previous_path_y, car_x, car_y, car_s, car_d, car_yaw, car_speed);
             }
 
-            // code for vehicle mitigation
             bool too_close = pathPlan.isClose(lane);
 
-            if (too_close )  // only two states: wants to change lane, and not in need state
+            if (too_close )
             {
-              //
-              cout << "wants to change from lane: " << lane << std::endl;
               lane = pathPlan.getLane(lane, projecting_dist);
             }
-
-            // accellerate and decellerate depending on cars in front and when starting
 
             if (too_close)
             {
