@@ -28,7 +28,6 @@ public:
 	void createTrajectory(std::vector<double> &next_x_vals, std::vector<double> &next_y_vals, int lane, double ref_vel, double projecting_dist );
 	bool isClose(int lane);
 	int getLane(int lane, double projecting_dist);
-	std::string hasData(std::string s);
 	void updateCarData(std::vector<std::vector<double>> &sensor_fusion, std::vector<double> &previous_path_x, std::vector<double> &previous_path_y,
 						double &car_x, double &car_y, double &car_s, double &car_d, double &car_yaw, double &car_speed);
 	void updateWaypoints(double &x, double &y, float &s, float &d_x, float &d_y);
