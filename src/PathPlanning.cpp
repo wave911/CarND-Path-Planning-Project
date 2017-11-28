@@ -188,7 +188,7 @@ double CPathPlanning::changeLane(int target_lane, int current_lane, double proje
 			check_car_s += ((double)m_previous_path_x.size() * FACTOR * check_speed);
 
 			if((check_car_s > m_car_s) && ((check_car_s - m_car_s)< projecting_dist)) {
-			cost = 999.0;
+				cost = 999.0;
 
 			}
 			else if ((check_car_s < m_car_s) && ((m_car_s - check_car_s)< projecting_dist))
