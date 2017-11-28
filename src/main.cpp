@@ -113,7 +113,7 @@ int main() {
             {
               //
               cout << "wants to change from lane: " << lane << std::endl;
-              lane = pathPlan.findBestLane(lane, projecting_dist);
+              lane = pathPlan.getLane(lane, projecting_dist);
             }
 
             // accellerate and decellerate depending on cars in front and when starting
